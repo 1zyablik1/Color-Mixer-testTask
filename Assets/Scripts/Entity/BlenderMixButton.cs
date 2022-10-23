@@ -6,7 +6,6 @@ public class BlenderMixButton : MonoBehaviour, IMouseInteractable
 {
     [SerializeField]
     private Blender blender;
-    private GameObject Cap;
 
     public void Interact()
     {

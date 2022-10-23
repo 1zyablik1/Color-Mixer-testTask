@@ -6,6 +6,8 @@ public class Blender : MonoBehaviour
 {
     [SerializeField]
     private GameObject liquid;
+    [SerializeField]
+    private GameObject Cap;
 
     public void Mix()
     {
