@@ -12,6 +12,7 @@ public class GlobalStateMachine : MonoBehaviour
         states = new List<IGlobalState>()
         {
             new Menu(),
+            new PreGame(),
             new Game(),
             new Finish()
         };

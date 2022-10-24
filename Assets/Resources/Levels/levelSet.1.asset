@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c68a6b36a8d1c24990dd81028241f7b, type: 3}
+  m_Name: levelSet.1
+  m_EditorClassIdentifier: 
+  finalColor: {r: 0.014462441, g: 0.6132076, b: 0.086565316, a: 1}
+  neededFruits:
+  - fruct: {fileID: 5201170873321114237, guid: ef9530ec457963e4ba78516282fc8d38, type: 3}
+    num: 2
+  - fruct: {fileID: 8284504598368389489, guid: c1a4ceaf97efb32438264d77fec237cd, type: 3}
+    num: 1
