@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: levelSet.1
   m_EditorClassIdentifier: 
   finalColor: {r: 0.014462441, g: 0.6132076, b: 0.086565316, a: 1}
+  darkerColor: {r: 0, g: 0.3490566, b: 0.041335657, a: 1}
   neededFruits:
-  - fruct: {fileID: 5201170873321114237, guid: ef9530ec457963e4ba78516282fc8d38, type: 3}
+  - fruct: {fileID: -771432054209996765, guid: ef9530ec457963e4ba78516282fc8d38, type: 3}
     num: 2
-  - fruct: {fileID: 8284504598368389489, guid: c1a4ceaf97efb32438264d77fec237cd, type: 3}
+  - fruct: {fileID: 2819647354459409217, guid: c1a4ceaf97efb32438264d77fec237cd, type: 3}
     num: 1

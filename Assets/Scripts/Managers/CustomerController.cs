@@ -25,8 +25,13 @@ public class CustomerController : MonoBehaviour
         InitData();
 
         GetCustomerMeshes();
+    }
+
+    private void Start()
+    {
         Reset();
     }
+
     private void Subscibe()
     {
         Events.OnGameReset += Reset;

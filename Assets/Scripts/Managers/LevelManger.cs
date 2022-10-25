@@ -13,6 +13,8 @@ public class LevelManger : MonoBehaviour
 
     private static Level levelData;
 
+    private static bool levelWin = false;
+
     private void Awake()
     {
         levelValue = PlayerPrefs.GetInt(levelValueName, 1);
@@ -34,14 +36,23 @@ public class LevelManger : MonoBehaviour
         return levelData;
     }
 
-    private void Unsubscribe()
+    private void Subsribe()
     {
         Events.OnGameReset += OnReset;
+        Events.GameEnd += LevelFinished;
+        Events.OnCoctailFinished += OnCoctailFinished;
+    }
+    private void Unsubscribe()
+    {
+        Events.OnGameReset -= OnReset;
+        Events.GameEnd -= LevelFinished;
+        Events.OnCoctailFinished -= OnCoctailFinished;
     }
 
     private void OnReset()
     {
         LoadLevel();
+        levelWin = false;
     }
 
     private void IncreaseLevelValue()
@@ -72,8 +83,22 @@ public class LevelManger : MonoBehaviour
         levelData = Resources.Load<Level>(GetLevelName(levelNum));
     }
 
-    private void Subsribe()
+    public static bool IsLevelWin()
     {
-        Events.OnGameReset += OnReset;
+        return levelWin;
+    }
+
+    private void LevelFinished(bool isLevelWin)
+    {
+        levelWin = isLevelWin;
+        if(levelWin)
+        {
+            IncreaseLevelValue();
+        }
+    }
+
+    private void OnCoctailFinished()
+    {
+        GlobalStateMachine.SetState<Finish>();
     }
 }

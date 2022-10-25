@@ -19,7 +19,7 @@ public class Control : MonoBehaviour
             if (Physics.Raycast(ray, out hit, maxRayDistance, layerMask))
             {
                 IMouseInteractable interactable = hit.collider.GetComponent<IMouseInteractable>();
-
+                
                 if (interactable != null)
                 {
                     interactable.Interact();

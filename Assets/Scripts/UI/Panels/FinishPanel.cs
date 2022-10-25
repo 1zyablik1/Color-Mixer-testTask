@@ -5,13 +5,11 @@ using UnityEngine.UI;
 
 public class FinishPanel : BaseUI
 {
-    [SerializeField] private Image buttonImage;
-    [SerializeField] private Image bgImage;
     [SerializeField] private TMP_Text textLose;
     [SerializeField] private TMP_Text textButton;
+    [SerializeField] private CanvasGroup canvasGroup;
 
     private float timeElement = 1.5f;
-    private float timeBG = 0.5f;
 
     private Sequence fadeSequence;
 
@@ -22,6 +20,17 @@ public class FinishPanel : BaseUI
 
     private void OnEnable()
     {
+        if(LevelManger.IsLevelWin())
+        {
+            textLose.text = "WIN";
+            textButton.text = "NEXT";
+        }
+        else
+        {
+            textLose.text = "LOSE";
+            textButton.text = "RESTART";
+        }
+
         AnimatePanel();
     }
 
@@ -34,17 +43,16 @@ public class FinishPanel : BaseUI
     {
         fadeSequence = DOTween.Sequence();
 
-        fadeSequence.Append(buttonImage.DOFade(1, timeElement));
-        fadeSequence.Insert(0, textButton.DOFade(1, timeElement));
-        fadeSequence.Insert(0, textLose.DOFade(1, timeElement));
-        fadeSequence.Insert(0, bgImage.DOFade(1, timeBG));
+        fadeSequence.Append(canvasGroup.DOFade(1, timeElement));
     }
 
     private void ResetPanel()
     {
-        SetImageAlpa(bgImage, 0);
-        SetImageAlpa(buttonImage, 0);
-        textLose.alpha = 0;
-        textButton.alpha = 0;
+        canvasGroup.alpha = 0;
+    }
+
+    public void ButtonClicked()
+    {
+        GlobalStateMachine.SetState<Menu>();
     }
 }

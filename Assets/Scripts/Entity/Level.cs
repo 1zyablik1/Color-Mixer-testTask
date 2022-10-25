@@ -6,6 +6,7 @@ using UnityEngine;
 public class Level : ScriptableObject
 {
     public Color finalColor;
+    public Color darkerColor;
     public List<DictForFruct> neededFruits;
 }
 

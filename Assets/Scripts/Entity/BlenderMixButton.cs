@@ -9,7 +9,10 @@ public class BlenderMixButton : MonoBehaviour, IMouseInteractable
 
     public void Interact()
     {
-        Events.OnStartMixing?.Invoke();
-        blender.Mix();
+        if (blender.isInteractable)
+        {
+            Events.OnStartMixing?.Invoke();
+            blender.Mix();
+        }
     }
 }

@@ -17,4 +17,8 @@ public class GameSettings : ScriptableObject
 
     public int maxItemInBlender;
 
+    public float timeScalingFruct;
+    public float timeMoveFruct;
+
+    public Vector3 vectorForceFruct;
 }

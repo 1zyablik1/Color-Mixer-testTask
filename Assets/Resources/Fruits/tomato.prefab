@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7927364256645857345}
-  - component: {fileID: 6153033791244985164}
   - component: {fileID: -5739125381181420428}
   - component: {fileID: 1804458741701332154}
-  m_Layer: 0
+  - component: {fileID: 5737212229729850904}
+  m_Layer: 7
   m_Name: tomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,18 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6153033791244985164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2153356012487641921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d7b45a46f8f25147a5dd35f54a2c5b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &-5739125381181420428
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -76,6 +64,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.08
   m_Center: {x: 0, y: 0.06, z: 0}
+--- !u!114 &5737212229729850904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2153356012487641921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a96d9039a76804abe82270529fcfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnedScale: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1001 &7987055728796185156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -142,6 +143,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: tomato Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1312b6419e02aee40ab7a03c23af5ad3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1312b6419e02aee40ab7a03c23af5ad3, type: 3}

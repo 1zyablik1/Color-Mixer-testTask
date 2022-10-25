@@ -17,7 +17,6 @@ public class FadePanel : BaseUI
         base.Subscribe();
 
         Events.OnGlobalMenuStateEnter += GlobalMenuStateEnter;
-        //Events.OnRestartButtonClick += RestartButtonClicked;
     }
 
     protected override void Unsubscribe()
@@ -25,7 +24,6 @@ public class FadePanel : BaseUI
         base.Unsubscribe();
 
         Events.OnGlobalMenuStateEnter -= GlobalMenuStateEnter;
-        //Events.OnRestartButtonClick -= RestartButtonClicked;
     }
 
     private void GlobalMenuStateEnter()

@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2750648369470624103}
-  - component: {fileID: 4260894639238485955}
   - component: {fileID: -35863024686345550}
   - component: {fileID: 4113682472918248664}
-  m_Layer: 0
+  - component: {fileID: 9002479941455359106}
+  m_Layer: 7
   m_Name: eggplant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,18 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4260894639238485955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202449633379940161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d7b45a46f8f25147a5dd35f54a2c5b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &-35863024686345550
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -77,6 +65,19 @@ CapsuleCollider:
   m_Height: 0.34
   m_Direction: 1
   m_Center: {x: 0, y: 0.16, z: 0}
+--- !u!114 &9002479941455359106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202449633379940161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd48d8a49beb52c4d8c81d85ff0b1e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnedScale: {x: 0.3, y: 0.3, z: 0.3}
 --- !u!1001 &4428326712719343563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,6 +144,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: eggplant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 660e8fc108e71654297d9d018c652a54,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 660e8fc108e71654297d9d018c652a54, type: 3}

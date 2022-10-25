@@ -1,16 +1,54 @@
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 public class Customer : MonoBehaviour
 {
     [SerializeField]
     private Animator animator;
 
+    public GameObject buble;
+    public SpriteRenderer liquid;
+
     [SerializeField]
     public RuntimeAnimatorController idle;
     public RuntimeAnimatorController walk;
 
     private Sequence rotationSequence;
+
+    private void Awake()
+    {
+        OnReset();
+        Subscribe();
+    }
+
+    private void OnDestroy()
+    {
+        Unsubscribe();
+    }
+
+
+    private void Subscribe()
+    {
+        Events.OnGameReset += OnReset;
+        Events.OnCoctailFinished += OnCoctailFinished;
+    }
+
+    private void Unsubscribe()
+    {
+        Events.OnGameReset += OnReset;
+        Events.OnCoctailFinished -= OnCoctailFinished;
+    }
+
+    private void OnReset()
+    {
+        buble.SetActive(false);
+    }
+
+    private void OnCoctailFinished()
+    {
+
+    }
 
     public void Move()
     {
@@ -29,6 +67,7 @@ public class Customer : MonoBehaviour
 
     private void MakeOrder()
     {
-
+        liquid.color = LevelManger.GetLevelData().finalColor;
+        buble.SetActive(true);
     }
 }
